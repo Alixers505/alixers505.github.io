@@ -1,0 +1,38 @@
+:root {
+  --color--primary: ;
+  --color--secondary: ;
+
+  --typography--logo: 'Merienda', 'Brush Script MT', cursive;
+  --typography--sans-serif: 'Verdana', sans-serif;
+}
+
+/* Header */
+
+nav ul,
+nav li {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.tow-header__logo,
+.tow-header__logo-letter {
+  color: #000;
+  text-decoration: none;
+}
+
+.tow-header__logo-letter {
+  font: 700 48px/1.5 var(--typography--logo);
+}
+
+/* Footer */
+
+footer {
+  background-color: #000;
+}
+
+.tow-footer__copyright {
+  color: #fff;
+  font: normal 20px/1.5 var(--typography--sans-serif);
+  margin: 0 auto;
+  text-align: center;
+}
