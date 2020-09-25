@@ -1,4 +1,6 @@
 :root {
+  --border-accent: 10px solid var(--color-accent);
+
   --color-primary: #006767;
   --color-secondary: #000000;
   --color-tertiary: #ffffff;
@@ -23,6 +25,10 @@
   --typography-sans-serif: 'Verdana', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: var(--font-body);
   margin: 0;
@@ -44,6 +50,7 @@ h2 {
 
 header {
   align-items: center;
+  border-bottom: var(--border-accent);
 }
 
 header h1,
@@ -114,19 +121,28 @@ p {
   font: var(--font-body);
 }
 
+.tow-connect {
+  text-align: center;
+}
+
+.tow-connect__link {
+  color: var(--color-primary);
+  font-size: 48px;
+  text-decoration: none;
+}
+
 /* Footer */
 
 footer {
   background-color: var(--color-secondary);
-  padding: var(--spacing--main);
-}
-
-.tow-footer__copyright {
+  border-top: var(--border-accent);
   color: var(--color-tertiary);
   font: var(--font-body);
   margin: 0 auto;
+  padding: var(--spacing--main);
   text-align: center;
 }
+
 
 /* Misc */
 
@@ -150,11 +166,6 @@ button:hover {
 /*** Responsive ***/
 
 @media (min-width: 400px) {
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
 
   nav ul,
   nav li {
@@ -180,10 +191,19 @@ button:hover {
     justify-content: center;
     padding-bottom: 0;
   }
-  
-  main {
-    margin-top: 238px;
+
+  .tow-footer--left {
+    justify-content: flex-start;
   }
+
+  .tow-footer--center {
+    justify-content: center;
+  }
+
+  .tow-footer--right {
+    justify-content: flex-end;
+  }
+
 }
 
 @media (min-width: 768px) {
