@@ -1,6 +1,4 @@
 :root {
-  --border-accent: 10px solid var(--color-accent);
-
   --color-primary: #006767;
   --color-secondary: #000000;
   --color-tertiary: #ffffff;
@@ -25,6 +23,12 @@
   --typography-sans-serif: 'Verdana', sans-serif;
 }
 
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -35,22 +39,49 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0 auto;
   text-align: center;
   width: 100%;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font: var(--font-body);
+}
+
 .tow__wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: var(--spacing-wrapper);
   padding: var(--spacing-wrapper-padding);
+}
+
+.tow__wrapper--half {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: var(--responsive-spacing);
 }
 
 /* Header */
 
 header {
   align-items: center;
-  border-bottom: var(--border-accent);
 }
 
 header h1,
@@ -101,24 +132,32 @@ nav li:last-child {
   padding-bottom: var(--responsive-spacing);
 }
 
+/* Main */
 
-.tow-header--secondary {
+
+#about {
   background-color: var(--color-secondary);
+  color: #fff;
 }
 
-.tow-page-title {
+.tow-section__title {
   font: var(--font-logo);
   margin-bottom: var(--responsive-spacing);
 }
 
-.tow-page-subtitle {
+.tow-section__subtitle {
   font-family: var(--typography-sans-serif);
 }
 
-/* Main */
+.tow-photo {
+  border-radius: 50%;
+  max-width: 300px;
+}
 
-p {
-  font: var(--font-body);
+
+#connect {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
 }
 
 .tow-connect {
@@ -126,16 +165,26 @@ p {
 }
 
 .tow-connect__link {
-  color: var(--color-primary);
-  font-size: 48px;
-  text-decoration: none;
+  padding: 10px;
 }
+
+.fa-twitter-square,
+.fa-linkedin {
+  fill: var(--color-tertiary);
+  transition: background-color 0.5s ease;
+  width: 40px;
+}
+
+.fa-twitter-square:hover,
+.fa-linkedin:hover {
+  fill: var(--color-secondary);
+}
+
 
 /* Footer */
 
 footer {
   background-color: var(--color-secondary);
-  border-top: var(--border-accent);
   color: var(--color-tertiary);
   font: var(--font-body);
   margin: 0 auto;
@@ -210,6 +259,13 @@ button:hover {
   :root {
     --responsive-spacing: 15px;
   }
+  .tow__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .tow__wrapper--half {
+    flex: 0 0 50%;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -217,7 +273,6 @@ button:hover {
     --responsive-wrapper-max-width: 1140px;
     --responsive-spacing: 20px;
   }
-
 
 }
 
