@@ -83,7 +83,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: var(--responsive-spacing);
+  margin: var(--responsive-spacing) 0;
 }
 
 .tow__wrapper--half:nth-child(3n + 2) > .tow-card {
@@ -291,6 +291,7 @@ button:hover {
 @media (min-width: 1920px) {
   :root {
     --responsive-wrapper-max-width: 1366px;
+    --responsive-spacing: 25px;
   }
 
 }
