@@ -87,12 +87,10 @@ p {
 }
 
 .tow__wrapper--half:nth-child(3n + 2) > .tow-card {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  border: 10px solid var(--color-primary);
 }
 .tow__wrapper--half:nth-child(3n + 3) > .tow-card {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  border: 10px solid var(--color-secondary);
 }
 
 .tow-card {
